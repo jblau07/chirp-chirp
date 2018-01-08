@@ -15,11 +15,20 @@ var counter = {
   "y" : 0,  "z" : 0
 }
 
-function countLetters(counter, sample_text){
+function countLetters(counter, sample_text) {
   // FIX ME
-}
+  let textChunk = sample_text.toLowerCase();
+    if (sample_text.length === 0) {
+    return;
+  }
+  let letterInput = textChunk.charAt(0);
+    if ([letterInput]) {
+    counter[letterInput]++;
+    }
+   countLetters(counter, textChunk.slice(1));
+ }
 
-$(document).ready(function(){
+ $(document).ready(function(){
   countLetters(counter, sample_text);
   $("#result").html(JSON.stringify(counter));
 });

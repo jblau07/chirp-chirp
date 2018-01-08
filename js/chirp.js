@@ -1,13 +1,16 @@
-function chirp(n){
+function chirp(n) {
   // FIX ME
-  if (n === 0){
+  let chirpStr = "chirp ";
+  if (n === 0) {
     return;
   }
-  let chirpStr = "chirp ";
-  return chirpStr.repeat(n);
-  chirp(--n);
+  if (n === 1) {
+    return chirpStr;
+  } else {
+    return chirpStr + chirp(--n);
+  }
 }
 
-$(document).ready(function(){
+$(document).ready(function () {
   $("#result").html(chirp(3));
 });
