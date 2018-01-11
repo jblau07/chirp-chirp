@@ -1,14 +1,9 @@
 function chirp(n) {
   // FIX ME
-  let chirpStr = "chirp ";
   if (n === 0) {
-    return;
+    return "";
   }
-  if (n === 1) {
-    return chirpStr;
-  } else {
-    return chirpStr + chirp(--n);
-  }
+  return "chirp " + chirp(--n);
 }
 
 $(document).ready(function () {

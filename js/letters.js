@@ -18,11 +18,12 @@ var counter = {
 function countLetters(counter, sample_text) {
   // FIX ME
   let textChunk = sample_text.toLowerCase();
-    if (sample_text.length === 0) {
+    
+  if (sample_text.length === 0) {
     return;
   }
   let letterInput = textChunk.charAt(0);
-    if ([letterInput]) {
+  if (counter.hasOwnProperty(letterInput)) {
     counter[letterInput]++;
     }
    countLetters(counter, textChunk.slice(1));
